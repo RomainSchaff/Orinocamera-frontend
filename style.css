@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(119, 161, 253);
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px black solid;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  margin-top: 0;
+  padding-top: 30px;
+  font-size: 50px;
+  -webkit-text-stroke: 1px black;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+p {
+  font-size: 24px;
+}
+
+#reset {
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 15px;
+  margin: 15px;
+}
+
+#reset:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+#panier {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transform: scale(1);
+  padding: 15px;
+  margin: 15px;
+}
+
+#panier:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+section {
+  min-height: 85vh;
+  padding: 25px 7%;
+}
+
+#title {
+  font-size: 25px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 50px;
+  font-size: 30px;
+  margin: 50px 100px;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .grille {
+    grid-template-columns: 1fr;
+    margin: 30px auto;
+  }
+}
+
+.card {
+  min-width: 250px;
+  max-width: 400px;
+  overflow: hidden;
+  background-color: rgb(119, 161, 253);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.card a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.card:hover a {
+  color: white;
+}
+
+#selected {
+  background-color: white;
+  width: 400px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+#selected p {
+  margin: 15px;
+}
+
+#name {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#description {
+  font-size: 20px;
+  font-style: italic;
+}
+
+#addPanier {
+  padding: 15px;
+  border-radius: 25px;
+  background-color: rgb(119, 161, 253);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#clear {
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: rgb(253, 175, 103);
+  cursor: pointer;
+}
+
+#recap {
+  padding: 10px;
+}
+
+#recap p {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+td {
+  border: 1px solid #333;
+  padding: 0;
+}
+
+thead,
+tfoot {
+  background-color: rgb(119, 161, 253);
+}
+
+#totalPrice {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.removeItem {
+  background-color: rgb(255, 42, 42);
+  margin: 10px;
+  cursor: pointer;
+}
+
+#total {
+  padding: 10px;
+}
+
+#order-form {
+  background-color: rgb(119, 161, 253);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#order-form input {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#error {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#order {
+  padding: 15px !important;
+  background-color: rgb(84, 216, 23);
+  cursor: pointer;
+}
+
+#container-confirmation {
+  font-weight: bold;
+  background-color: white;
+  width: fit-content;
+  padding: 25px;
+  margin: 50px auto;
+  border: 3px solid black;
+  border-radius: 25px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(119, 161, 253);
+  border-top: 1px solid black;
+}
+
+footer a {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none;
+  margin: 25px;
+}
+
+footer a:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}

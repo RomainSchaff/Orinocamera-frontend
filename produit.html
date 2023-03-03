@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orinoco</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Orinocamera</h1>
+      <a href="index.html" id="reset">Accueil</a>
+      <a href="panier.html" id="panier">Panier</a>
+    </header>
+    <section>
+      <main>
+        <p id="title">Personnalisation de votre caméra :</p>
+        <div id="selected">
+          <div id="displayProduct"></div>
+          <form>
+            <label for="quantity">Quantité :</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              max="50"
+              value="1"
+            />
+            <br /><br />
+            <label for="lenses-select">Choissisez une lentille :</label>
+            <select name="lenses" id="lenses-select">
+              <option value="">--Please choose an option--</option>
+            </select>
+          </form>
+          <br />
+          <button id="addPanier">Ajouter au panier</button>
+        </div>
+      </main>
+    </section>
+    <footer>
+      <a href="#" id="Contact">Contact</a>
+      <a href="#" id="link">Mentions légales</a>
+    </footer>
+
+    <script src="js/produit.js"></script>
+  </body>
+</html>
