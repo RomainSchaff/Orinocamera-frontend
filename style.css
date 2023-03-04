@@ -84,8 +84,6 @@ section {
   row-gap: 50px;
   font-size: 30px;
   margin: 50px 50px;
-  align-items: center;
-  justify-items: center;
 }
 
 .card {

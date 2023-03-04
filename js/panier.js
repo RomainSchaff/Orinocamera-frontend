@@ -8,7 +8,7 @@ const order = document.getElementById("order");
 function displayPanier() {
   if (localStorage.products == null) {
     main.innerHTML = `<p>Panier vide</p>`;
-    let path = "../images/areukidding.gif";
+    let path = "./images/areukidding.gif";
     main.innerHTML += `<img src="${path}">`;
   } else {
     let storage = JSON.parse(localStorage.products);
