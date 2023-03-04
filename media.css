@@ -1,6 +1,7 @@
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   .grille {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0;
   }
 }
 
@@ -8,5 +9,33 @@
   .grille {
     grid-template-columns: 1fr;
     margin: 30px auto;
+  }
+
+  #selected {
+    margin: auto;
+  }
+
+  section {
+    padding: 0px;
+  }
+
+  thead tr:nth-child(2) {
+    display: none;
+  }
+
+  thead tr:nth-child(1) {
+    display: inline-block;
+  }
+
+  thead tr,
+  tbody tr,
+  tfoot tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #order-form {
+    border-radius: 0;
+    margin-bottom: 50px;
   }
 }
