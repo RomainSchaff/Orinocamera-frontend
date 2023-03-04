@@ -1,4 +1,5 @@
 const main = document.querySelector("main");
+const panier = document.getElementById("panier");
 const displayProduct = document.getElementById("displayProduct");
 let params = new URL(document.location).searchParams;
 let id = params.get("id");
@@ -41,6 +42,7 @@ function addCameraToStorage() {
       allProducts.push(optionsProduct);
       localStorage.setItem("products", JSON.stringify(allProducts));
       alert(`la camera : ${dataCamera.name} est ajoutée au panier !`);
+      document.location.href = "panier.html";
     } else {
       alert("Vous devez choisir une lentille pour votre caméra");
     }
@@ -49,7 +51,7 @@ function addCameraToStorage() {
 
 // Demande une camera sélectionnée
 async function getOneCamera() {
-  await fetch(`http://localhost:4000/api/cameras/${id}`)
+  await fetch(`https://orinocamera-backend.onrender.com/api/cameras/${id}`)
     .then(function (res) {
       if (res.ok) {
         return res.json();
@@ -84,6 +86,9 @@ async function displayOneCamera() {
 function page() {
   displayOneCamera();
   addCameraToStorage();
+  if (localStorage.getItem("products")) {
+    panier.setAttribute("class", "shiny");
+  }
 }
 
 page();

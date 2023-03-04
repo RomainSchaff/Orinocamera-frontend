@@ -5,7 +5,7 @@ let dataCameras;
 
 // Fonction qui fait une requete GET pour avoir le tableau des produits
 async function getCameras() {
-  await fetch("http://localhost:4000/api/cameras")
+  await fetch("https://orinocamera-backend.onrender.com/api/cameras")
     .then(function (res) {
       if (res.ok) {
         return res.json();
@@ -40,4 +40,11 @@ async function displayCameras() {
     .join("");
 }
 
-displayCameras();
+function page() {
+  displayCameras();
+  if (localStorage.getItem("products")) {
+    panier.setAttribute("class", "shiny");
+  }
+}
+
+page();

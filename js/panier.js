@@ -125,14 +125,16 @@ function confirmForm() {
   }
   // Vérification si les données sont correct pour la ville:
   function cityChecker(value) {
-    if (value.length > 0 && (value.length < 3 || value.length > 20)) {
+    if (value.length > 0 && (value.length < 3 || value.length > 30)) {
       error.textContent = "";
       error.textContent += "La ville doit faire entre 3 et 20 caractères";
       city = null;
-    } else if (!value.match(/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/)) {
+    } else if (
+      !value.match(/^[a-zA-ZÀ-ÖØ-öø-ÿ]+(?:[-\s][a-zA-ZÀ-ÖØ-öø-ÿ]+)*$/)
+    ) {
       error.textContent = "";
       error.textContent +=
-        "La ville ne doit pas contenir de caractères spéciaux";
+        "La ville ne doit pas contenir de caractères spéciaux, de nombre ou de ponctuation.";
       city = null;
     } else {
       city = value;
@@ -242,7 +244,7 @@ function confirmForm() {
         .getElementById("total")
         .getAttribute("data-total");
       // Méthode POST qui récupère l'orderId puis on le stock dans le localStorage
-      fetch("http://localhost:4000/api/cameras/order", {
+      fetch("https://orinocamera-backend.onrender.com/api/cameras/order", {
         method: "POST",
         body: JSON.stringify(order),
         headers: { "Content-Type": "application/json" },
@@ -274,5 +276,8 @@ function page() {
   displayPanier();
   clearPanier();
   confirmForm();
+  if (localStorage.getItem("products")) {
+    panier.setAttribute("class", "shiny");
+  }
 }
 page();
