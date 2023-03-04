@@ -1,3 +1,3 @@
 # Orinocamera-front
 
-Front du site MVP e-commerce Orinocamera: HTML/CSS/Javascript
+MVP du site e-commerce Orinocamera: HTML/CSS/Javascript
