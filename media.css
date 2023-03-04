@@ -39,4 +39,9 @@
     border-radius: 0;
     margin-bottom: 50px;
   }
+
+  iframe {
+    height: 300px;
+    width: 300px;
+  }
 }

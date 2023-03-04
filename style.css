@@ -270,6 +270,11 @@ thead tr:nth-child(1) {
   border: 2px solid black;
 }
 
+iframe {
+  height: 400px;
+  width: 400px;
+}
+
 footer {
   position: relative;
   bottom: 0;
