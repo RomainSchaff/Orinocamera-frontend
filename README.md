@@ -1,3 +1,3 @@
-# Orinocamera-backend
+# Orinocamera-front
 
-Ceci est le backend du site Orinocamera avec NodeJS et héberger sur render.com
+MVP du site e-commerce Orinocamera: HTML/CSS/Javascript
