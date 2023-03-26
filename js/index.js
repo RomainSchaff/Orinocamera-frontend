@@ -5,6 +5,8 @@ let dataCameras;
 
 // Fonction qui fait une requete GET pour avoir le tableau des produits
 async function getCameras() {
+  main.innerHTML =
+    "<div class='lds-spinner'><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>";
   await fetch("https://orinocamera-backend.onrender.com/api/cameras")
     .then(function (res) {
       if (res.ok) {
@@ -16,8 +18,7 @@ async function getCameras() {
     })
     .catch(function (err) {
       // Une erreur est survenue
-      main.textContent =
-        "Erreur dans la récupération des produits depuis l'API.";
+      main.textContent = "Problème de connexion au service";
     });
 }
 
